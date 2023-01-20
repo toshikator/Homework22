@@ -7,8 +7,7 @@
         './js/Chocolate.js',
         './js/Wine.js',
         './js/Store.js',
-        // './js/QA.js'
-
+        './js/ObjectForAdd.js',
 
 
 

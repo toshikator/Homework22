@@ -3,6 +3,15 @@ class Product {
     static getAmountOfInstances() {
         return this.#amountOfInstances
     }
+    static #specialParametersDatabase ={
+        Milk: 'fat',
+        Chocolate: 'kind',
+        Wine: 'alcohol',
+    }
+    static get specialParametersDatabase() {
+        return JSON.parse(JSON.stringify(this.#specialParametersDatabase));
+    }
+
     #id;
     #title;
     #manufacture;
