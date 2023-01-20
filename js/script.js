@@ -27,9 +27,10 @@
 
 
     let NewProduct;
-    newProductAddForm.onsubmit = ()=>{
+    newProductAddForm.onsubmit = (e)=>{
+        e.preventDefault();
         NewProduct = ObjectForAdd.getNewObject;
-        // alert(NewProduct);
+        console.log (NewProduct);
     };
 
 

@@ -12,12 +12,18 @@ class ObjectForAdd {
         ObjectForAdd.#newObject['title'] = ObjectForAdd.#productTitle.value;
         ObjectForAdd.#newObject['manufacturer'] = ObjectForAdd.#productManufacturer.value;
         ObjectForAdd.#newObject['price'] = ObjectForAdd.#productPrice.value;
-        let valueOfSpecialParameter = 'unknown name of the special field';
-        // alert(JSON.stringify(Object.keys(ObjectForAdd.#specialParametersDatabase)));
-        if ((Object.keys(ObjectForAdd.#specialParametersDatabase))[this.#productType.value]){
-            valueOfSpecialParameter = ObjectForAdd.#specialParametersDatabase[ObjectForAdd.#productType.value];
+        let nameOfSpecialParameter = 'unknown name of the special field in the form';
+
+
+
+        let a = (ObjectForAdd.#productType.value.at(0).toUpperCase());
+        let b = (ObjectForAdd.#productType.value.slice(1));
+
+        if(Object.keys(ObjectForAdd.#specialParametersDatabase).includes(a+b)){
+            nameOfSpecialParameter = ObjectForAdd.#specialParametersDatabase[a+b];
         }
-        ObjectForAdd.#newObject[ObjectForAdd.#productType.value] = valueOfSpecialParameter;
+
+        ObjectForAdd.#newObject[nameOfSpecialParameter] = ObjectForAdd.#productSpecialParameterConnector.value;
         alert(JSON.stringify( ObjectForAdd.#newObject));
         return JSON.parse(JSON.stringify(ObjectForAdd.#newObject));
     }
