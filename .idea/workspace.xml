@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="with HTML, without QA">
+    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="added specialParametersDatabase to Product class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ObjectForAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ObjectForAdd.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
       <workItem from="1674083536750" duration="762000" />
       <workItem from="1674148015672" duration="25000" />
       <workItem from="1674168083894" duration="5586000" />
-      <workItem from="1674214278887" duration="3103000" />
+      <workItem from="1674214278887" duration="4037000" />
     </task>
     <task id="LOCAL-00001" summary="with HTML">
       <created>1674174074470</created>
@@ -70,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674174360605</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added specialParametersDatabase to Product class">
+      <created>1674219995029</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674219995029</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +84,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="with HTML" />
     <MESSAGE value="with HTML, without QA" />
-    <option name="LAST_COMMIT_MESSAGE" value="with HTML, without QA" />
+    <MESSAGE value="added specialParametersDatabase to Product class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added specialParametersDatabase to Product class" />
   </component>
 </project>
