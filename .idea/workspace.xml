@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="added specialParametersDatabase to Product class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="added complete ObjectForAdd class">
       <change beforePath="$PROJECT_DIR$/js/ObjectForAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ObjectForAdd.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
       <workItem from="1674083536750" duration="762000" />
       <workItem from="1674148015672" duration="25000" />
       <workItem from="1674168083894" duration="5586000" />
-      <workItem from="1674214278887" duration="4037000" />
+      <workItem from="1674214278887" duration="4715000" />
     </task>
     <task id="LOCAL-00001" summary="with HTML">
       <created>1674174074470</created>
@@ -75,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674219995029</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added complete ObjectForAdd class">
+      <created>1674220915319</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674220915319</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +91,7 @@
     <MESSAGE value="with HTML" />
     <MESSAGE value="with HTML, without QA" />
     <MESSAGE value="added specialParametersDatabase to Product class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added specialParametersDatabase to Product class" />
+    <MESSAGE value="added complete ObjectForAdd class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added complete ObjectForAdd class" />
   </component>
 </project>
