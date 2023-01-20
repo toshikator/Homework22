@@ -1,28 +1,36 @@
 
 
 (()=>{
-    const scriptList = [
-        './js/Product.js',
-        './js/Milk.js',
-        './js/Chocolate.js',
-        './js/Wine.js',
-        './js/Store.js',
-        './js/ObjectForAdd.js',
+    // const scriptList = [
+    //     '',
+    //     '',
+    //     '',
+    //     '',
+    //     '',
+    //     '',
+    //
+    //
+    //
+    //
+    // ];
+    // scriptList.forEach((value)=>{
+    //     const script = document.createElement('script');
+    //     script.setAttribute('src',value);
+    //     // script.defer = false;
+    //     document.body.appendChild(script);
+    //     // console.log(script);
+    // });
+
+
+    const newProductAddForm = document.getElementById('newElement');
 
 
 
-
-    ];
-    scriptList.forEach((value)=>{
-        const script = document.createElement('script');
-        script.setAttribute('src',value);
-        script.defer = false;
-        document.head.appendChild(script);
-        // console.log(script);
-    });
-
-
-
+    let NewProduct;
+    newProductAddForm.onsubmit = ()=>{
+        NewProduct = ObjectForAdd.getNewObject;
+        // alert(NewProduct);
+    };
 
 
 

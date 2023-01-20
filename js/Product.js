@@ -8,8 +8,9 @@ class Product {
         Chocolate: 'kind',
         Wine: 'alcohol',
     }
-    static get specialParametersDatabase() {
-        return JSON.parse(JSON.stringify(this.#specialParametersDatabase));
+    static get getSpecialParametersDatabase() {
+        // alert( JSON.stringify(Product.#specialParametersDatabase));
+        return JSON.parse( JSON.stringify(Product.#specialParametersDatabase));
     }
 
     #id;
