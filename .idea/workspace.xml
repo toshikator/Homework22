@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="added complete ObjectForAdd class">
+      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ObjectForAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ObjectForAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Chocolate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Milk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ObjectForAdd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Product.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/QA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Wine.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +32,16 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KWHhHwmd78P0v6EAXm86WxDmwZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -55,6 +66,11 @@
       <workItem from="1674168083894" duration="5586000" />
       <workItem from="1674214278887" duration="8596000" />
       <workItem from="1674226548485" duration="2853000" />
+      <workItem from="1674246770290" duration="2198000" />
+      <workItem from="1674253322777" duration="6274000" />
+      <workItem from="1674259613905" duration="2621000" />
+      <workItem from="1674262760769" duration="2226000" />
+      <workItem from="1674264998297" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary="with HTML">
       <created>1674174074470</created>
@@ -105,6 +121,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="with HTML" />
     <MESSAGE value="with HTML, without QA" />
     <MESSAGE value="added specialParametersDatabase to Product class" />
