@@ -15,7 +15,8 @@ class Product {
     #title;
     #manufacture;
     #price;
-    // #specialParameter;
+    #specialParameter;
+    #specialParameterName;
     constructor(title = 'defaultTitle',
                 manufacture = 'defaultManufacture',
                 price = 0) {
@@ -52,51 +53,51 @@ class Product {
 }
 
 class Milk extends  Product{
-    #fat;
-    // #specialParameter = 'fat';
-    constructor(title, manufacture, price, fat) {
+    #specialParameter;
+    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+    constructor(title, manufacture, price, specialParameter) {
         super(title, manufacture, price);
-        this.fatSetter = fat;
+        this.specialParameterSetter = specialParameter;
     }
-
-    get fatGetter(){ return this.#fat; }
-    set fatSetter(value){
+    get specialParameterNameGetter(){return this.#specialParameterName}
+    get specialParameterGetter(){ return this.#specialParameter; }
+    set specialParameterSetter(value){
         if (!Number.isNaN(Number(value)) && value !== undefined && (!Number.isNaN(Number(value) >= 0)) && (!Number.isNaN(Number(value) < 100))){
-            this.#fat = Number(value);
+            this.#specialParameter = Number(value);
         } else{
-            console.error('ERROR!!! Trying to set incorrect value to fat');
+            console.error('ERROR!!! Trying to set incorrect value to alcohol');
         }
     }
 }
 class Chocolate extends Product{
-    #kind;
-    // #specialParameter = 'kind';
-constructor(title, manufacture, price, kind) {
+    #specialParameter;
+    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+constructor(title, manufacture, price, specialParameter) {
     super(title, manufacture, price);
-    this.kindSetter = kind;
+    this.specialParameterSetter = specialParameter;
 }
-
-    get kindGetter(){ return this.#kind; }
-    set kindSetter(value){
+    get specialParameterNameGetter(){return this.#specialParameterName}
+    get specialParameterGetter(){ return this.#specialParameter; }
+    set specialParameterSetter(value){
         if (typeof value === "string") {
-            this.#kind = value;
+            this.#specialParameter = value;
         } else {
             console.error('ERROR!!! Trying to set not a string to kind');
         }
     }
 }
 class Wine extends  Product{
-    #alcohol;
-    // #specialParameter = 'alcohol';
-    constructor(title, manufacture, price, alcohol) {
+    #specialParameter;
+    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+    constructor(title, manufacture, price, specialParameter) {
         super(title, manufacture, price);
-        this.alcoholSetter = alcohol;
+        this.specialParameterSetter = specialParameter;
     }
-
-    get alcoholGetter(){ return this.#alcohol; }
-    set alcoholSetter(value){
+    get specialParameterNameGetter(){return this.#specialParameterName}
+    get specialParameterGetter(){ return this.#specialParameter; }
+    set specialParameterSetter(value){
         if (!Number.isNaN(Number(value)) && value !== undefined && (!Number.isNaN(Number(value) >= 0)) && (!Number.isNaN(Number(value) < 100))){
-            this.#alcohol = Number(value);
+            this.#specialParameter = Number(value);
         } else{
             console.error('ERROR!!! Trying to set incorrect value to alcohol');
         }

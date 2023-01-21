@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="new branch maybe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
@@ -64,6 +65,9 @@
       <workItem from="1674259613905" duration="2621000" />
       <workItem from="1674262760769" duration="2226000" />
       <workItem from="1674264998297" duration="3003000" />
+      <workItem from="1674300251607" duration="3137000" />
+      <workItem from="1674309821454" duration="692000" />
+      <workItem from="1674317643046" duration="5325000" />
     </task>
     <task id="LOCAL-00001" summary="with HTML">
       <created>1674174074470</created>

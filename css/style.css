@@ -99,6 +99,7 @@ ul
     padding: 20px;
     flex-wrap: wrap;
     width: 700px;
+    background-color: darkorange;
 }
 
 .card
@@ -122,7 +123,7 @@ ul
     padding: 5px 15px;
 }
 
-#section form
+form
 {
     display: flex;
     flex-direction: column;
@@ -169,4 +170,7 @@ ul
     color: green;
     border-color: green;
     background-color: rgb(197, 226, 196);
+}
+.hide{
+    display: none;
 }
