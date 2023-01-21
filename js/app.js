@@ -109,7 +109,13 @@
         myStore.addProduct(obj);
         console.log('store all');
         localStorage.setItem('ProductDatabase',JSON.stringify(myStore.getAllProducts()));
-
+        const msg = document.createElement('div');
+        msg.textContent = `Successfully added: ${formConnector.title.value}`;
+        msg.classList.add('alert-success');
+        formConnector.appendChild(msg);
+        setTimeout(()=>{
+            msg.classList.add('hide');
+        },1800)
        // console.log('object: ',obj);
         console.log('store all:',myStore.getAllProducts());
     });
