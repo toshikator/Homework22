@@ -4,9 +4,11 @@
     const productManufacture = formConnector.manufacturer;
     const productPrice = formConnector.price;
     const productType = formConnector.type;
-    const productSpecialParameter = formConnector.special_parameter;
+    const productSpecialParameter = formConnector.specialParameter;
+    // const databaseName = `ProductDatabase`;
+    const baseFromLocalStorage = (localStorage.ProductDatabase)?JSON.parse(localStorage.getItem('ProductDatabase')):[];
+    const myStore = new Store('Lavka',baseFromLocalStorage);
 
-    const myStore = new Store('Lavka');
 
     productType.addEventListener('change',()=>{
         productSpecialParameter.placeholder = Product.getSpecialParametersDatabase()[productType.value];
@@ -40,10 +42,10 @@
             default: break;
        }
         myStore.addProduct(obj);
-
+        localStorage.setItem('ProductDatabase',JSON.stringify(myStore.getAllProducts()));
 
        // console.log('object: ',obj);
-        console.log('store all:',myStore.getAll());
+        console.log('store all:',myStore.getAllProducts());
     });
 
 

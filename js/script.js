@@ -15,7 +15,7 @@ class Product {
     #title;
     #manufacture;
     #price;
-    #specialParameter;
+    // #specialParameter;
     constructor(title = 'defaultTitle',
                 manufacture = 'defaultManufacture',
                 price = 0) {
@@ -53,7 +53,7 @@ class Product {
 
 class Milk extends  Product{
     #fat;
-    #specialParameter = 'fat';
+    // #specialParameter = 'fat';
     constructor(title, manufacture, price, fat) {
         super(title, manufacture, price);
         this.fatSetter = fat;
@@ -70,7 +70,7 @@ class Milk extends  Product{
 }
 class Chocolate extends Product{
     #kind;
-    #specialParameter = 'kind';
+    // #specialParameter = 'kind';
 constructor(title, manufacture, price, kind) {
     super(title, manufacture, price);
     this.kindSetter = kind;
@@ -87,7 +87,7 @@ constructor(title, manufacture, price, kind) {
 }
 class Wine extends  Product{
     #alcohol;
-    #specialParameter = 'alcohol';
+    // #specialParameter = 'alcohol';
     constructor(title, manufacture, price, alcohol) {
         super(title, manufacture, price);
         this.alcoholSetter = alcohol;
@@ -108,8 +108,9 @@ class Store {
     #products = [];
     #productType = ['Milk', 'Chocolate', 'Wine'];
 
-    constructor(name) {
+    constructor(name = 'default store', productDatabaseInit = []) {
         this.nameSetter = name;
+        this.#products = (JSON.parse(JSON.stringify(productDatabaseInit)));
     }
     set nameSetter(value){
         if (typeof value === "string") {
@@ -125,8 +126,8 @@ class Store {
             console.error('ERROR!!! Trying to add incorrect instance to products, or add existing  product');
         }
     }
-    getAll(){
-        return [...this.#products];
+    getAllProducts(){
+        return this.#products.map(value => value);
     }
     getByType(type){
         if (this.#productType.includes(type)) {

@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="added complete ObjectForAdd class">
-      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+    <list default="true" id="02172c0f-5719-4858-b1d6-13ac7eaa19b3" name="Changes" comment="new branch maybe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Chocolate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Milk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ObjectForAdd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/QA.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Wine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +63,7 @@
       <workItem from="1674253322777" duration="6274000" />
       <workItem from="1674259613905" duration="2621000" />
       <workItem from="1674262760769" duration="2226000" />
-      <workItem from="1674264998297" duration="1361000" />
+      <workItem from="1674264998297" duration="3003000" />
     </task>
     <task id="LOCAL-00001" summary="with HTML">
       <created>1674174074470</created>
@@ -114,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674226493413</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new branch maybe">
+      <created>1674266459181</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674266459181</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +126,7 @@
     <MESSAGE value="with HTML, without QA" />
     <MESSAGE value="added specialParametersDatabase to Product class" />
     <MESSAGE value="added complete ObjectForAdd class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added complete ObjectForAdd class" />
+    <MESSAGE value="new branch maybe" />
+    <option name="LAST_COMMIT_MESSAGE" value="new branch maybe" />
   </component>
 </project>
