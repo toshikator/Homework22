@@ -9,7 +9,6 @@
     const section = document.getElementById('section');
     const sideNav = document.getElementById('side_nav');
     const content = document.querySelector('.content');
-    // const baseFromLocalStorage = (localStorage.ProductDatabase)?JSON.parse(localStorage.getItem('ProductDatabase')):[];
     const myStore = new Store('Lavka');
 
     const test0 = new Wine('buhlo','ssanina',100,14);
@@ -32,7 +31,6 @@
     myStore.addProduct(test7);
     myStore.addProduct(test8);
     console.log(myStore);
-
 
     productType.addEventListener('change',()=>{
         productSpecialParameter.placeholder = Product.getSpecialParametersDatabase()[productType.value];
@@ -73,12 +71,8 @@
                     <h4>Price: ${product.priceGetter}</h4>
             `;
             content.appendChild(card);
-        })
+        });
     }
-
-
-
-
 
     formConnector.addEventListener('submit',(eve)=>{
         // console.log('teestsse',productSpecialParameter);
@@ -119,8 +113,6 @@
        // console.log('object: ',obj);
         console.log('store all:',myStore.getAllProducts());
     });
-
-
 
 
 
