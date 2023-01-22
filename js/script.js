@@ -80,21 +80,18 @@ class Milk extends  Product{
         super(title, manufacture, price);
         this.specialParameterSetter(specialParameter);
     }
-    get specialParameterNameGetter(){return this.specialParameterName}
 }
 class Chocolate extends Product{
 constructor(title, manufacture, price, specialParameter) {
     super(title, manufacture, price);
     this.specialParameterSetter(specialParameter);
 }
-    get specialParameterNameGetter(){return this.specialParameterName}
 }
 class Wine extends  Product{
     constructor(title, manufacture, price, specialParameter) {
         super(title, manufacture, price);
         this.specialParameterSetter(specialParameter);
     }
-    get specialParameterNameGetter(){return this.specialParameterName}
 }
 class Store {
     #storeInfo = {};

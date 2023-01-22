@@ -69,7 +69,7 @@
                 <h2>${product.constructor.name}</h2>
                     <h3>${product.titleGetter}</h3>
                     <h3>${product.manufactureGetter}</h3>
-                    <h4>${product.specialParameterNameGetter}: ${product.specialParameterGetter}</h4>
+                    <h4>${product.specialParameterName}: ${product.specialParameterGetter}</h4>
                     <h4>Price: ${product.priceGetter}</h4>
             `;
             content.appendChild(card);
