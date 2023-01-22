@@ -35,10 +35,13 @@
     productType.addEventListener('change',()=>{
         productSpecialParameter.placeholder = Product.getSpecialParametersDatabase()[productType.value];
         (productType.value === 'chocolate')?productSpecialParameter.type = 'text':productSpecialParameter.type = 'number';
-    })
+    });
 
     section.addEventListener('click', event =>{
         if (event.target.dataset.name === undefined){
+
+        }
+        else if (event.target.dataset.name === 'all'){
             renderProducts(myStore.getAllProducts());
             changeActiveClassOnElement(event);
         } else{
@@ -47,15 +50,11 @@
         }
     });
 
-    function changeActiveClassOnElement(event) {
-        Array.from(event.target.parentElement.children).forEach((node)=>{
-            node.classList.remove('active');
-        });
-        event.target.classList.add('active');
-    }
+
 
     nav.addEventListener('click',event=>{
         if (event.target.id === 'productsLink'){
+            console.log(myStore.getAllProducts());
             renderProducts(myStore.getAllProducts());
             formConnector.classList.add('hide');
             content.classList.remove('hide')
@@ -89,7 +88,12 @@
             content.appendChild(card);
         });
     }
-
+    function changeActiveClassOnElement(event) {
+        Array.from(event.target.parentElement.children).forEach((node)=>{
+            node.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
     formConnector.addEventListener('submit',(eve)=>{
         // console.log('teestsse',productSpecialParameter);
         eve.preventDefault();
@@ -110,6 +114,12 @@
                 break;
             case 'chocolate':
                 obj = new Chocolate(productTitle.value,
+                    productManufacture.value,
+                    productPrice.value,
+                    productSpecialParameter.value);
+                break;
+            case 'butter':
+                obj = new Butter(productTitle.value,
                     productManufacture.value,
                     productPrice.value,
                     productSpecialParameter.value);

@@ -3,6 +3,9 @@ class Product {
     static getSpecialParametersDatabase() {
         return JSON.parse(JSON.stringify(Product.#specialParametersDatabase));
     }
+    static getAvailableProductNames() {
+        return JSON.parse(JSON.stringify(Object.keys(Product.#specialParametersDatabase)));
+    }
     static #amountOfInstances = 0;
     static getAmountOfInstances() {
         return this.#amountOfInstances
@@ -11,6 +14,7 @@ class Product {
         milk: 'fat',
         chocolate: 'kind',
         wine: 'alcohol',
+        butter: 'volume',
     }
     #id;
     #title;
@@ -25,7 +29,7 @@ class Product {
                 this.#specialParameter = '';
                 console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
             }
-        } else if(this.constructor.name === 'Milk' || this.constructor.name === 'Wine'){
+        } else if(this.constructor.name === 'Milk' || this.constructor.name === 'Wine' || this.constructor.name === 'Butter'){
             if (!Number.isNaN(Number(value)) && value !== undefined
                 && (Number(value) >= 0) && (Number(value) < 100)){
                 this.#specialParameter = Number(value);
@@ -94,10 +98,16 @@ class Wine extends  Product{
         this.specialParameterSetter(specialParameter);
     }
 }
+class Butter extends  Product{
+    constructor(title, manufacture, price, specialParameter) {
+        super(title, manufacture, price);
+        this.specialParameterSetter(specialParameter);
+    }
+}
 class Store {
     #storeInfo = {};
     #products = [];
-    #productType = ['Milk', 'Chocolate', 'Wine'];
+    #productType = Product.getAvailableProductNames();
 
     constructor(name = 'default store', productDatabaseInit = []) {
         this.nameSetter = name;
@@ -111,6 +121,7 @@ class Store {
         }
     }
     addProduct(product){
+        // console.log(product);
         if (product instanceof Product && !this.#products.includes(product)){
             this.#products.push(product);
         } else {
@@ -120,10 +131,10 @@ class Store {
     getAllProducts(){
         return this.#products.map(value => value);
     }
-    getProductsByType(type){
-        if (this.#productType.includes(type)) {
+    getProductsByType(typeToShow){
+        if (this.#productType.includes(String(typeToShow))) {
             return this.#products.filter((product) => {
-                return product.constructor.name === type;
+                return product.constructor.name.toLowerCase() === typeToShow;
             });
         } else {
             console.error('ERROR!!! Trying to get incorrect type of product');
