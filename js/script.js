@@ -1,3 +1,4 @@
+
 class Product {
     static getSpecialParametersDatabase() {
         return JSON.parse(JSON.stringify(Product.#specialParametersDatabase));

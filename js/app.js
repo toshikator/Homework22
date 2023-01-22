@@ -132,5 +132,6 @@
 
 
 
+
     renderProducts(myStore.getAllProducts());
 })()
