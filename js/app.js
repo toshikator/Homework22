@@ -39,23 +39,39 @@
 
     section.addEventListener('click', event =>{
         if (event.target.dataset.name === undefined){
-            renderProducts(myStore.getAllProducts())
+            renderProducts(myStore.getAllProducts());
+            changeActiveClassOnElement(event);
         } else{
-            renderProducts(myStore.getProductsByType(event.target.dataset.name))
+            renderProducts(myStore.getProductsByType(event.target.dataset.name));
+            changeActiveClassOnElement(event);
         }
     });
 
+    function changeActiveClassOnElement(event) {
+        Array.from(event.target.parentElement.children).forEach((node)=>{
+            node.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+
     nav.addEventListener('click',event=>{
-       if (event.target.id === 'productsLink'){
-           renderProducts(myStore.getAllProducts());
-           formConnector.classList.add('hide');
-           content.classList.remove('hide')
-           sideNav.classList.remove('hide');
-       } else if(event.target.id === 'addLink'){
-           formConnector.classList.remove('hide');
-           content.classList.add('hide');
-           sideNav.classList.add('hide');
-       }
+        if (event.target.id === 'productsLink'){
+            renderProducts(myStore.getAllProducts());
+            formConnector.classList.add('hide');
+            content.classList.remove('hide')
+            sideNav.classList.remove('hide');
+            changeActiveClassOnElement(event);
+            for (let child of sideNav.firstElementChild.children) {
+                child.classList.remove('active');
+            }
+            sideNav.firstElementChild.firstElementChild.classList.add('active');
+        } else if(event.target.id === 'addLink'){
+            formConnector.classList.remove('hide');
+            formConnector.parentElement.style.justifyContent = 'center';
+            content.classList.add('hide');
+            sideNav.classList.add('hide');
+            changeActiveClassOnElement(event);
+        }
     });
 
     function renderProducts(products) {

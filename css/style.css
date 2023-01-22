@@ -93,6 +93,11 @@ ul
     color: #fff;
 }
 
+.active{
+    background-color: rgb(0, 99, 180);
+    color: #fff;
+}
+
 .content
 {
     display: flex;
