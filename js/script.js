@@ -119,7 +119,7 @@ class Store {
     getAllProducts(){
         return this.#products.map(value => value);
     }
-    getByType(type){
+    getProductsByType(type){
         if (this.#productType.includes(type)) {
             return this.#products.filter((product) => {
                 return product.constructor.name === type;

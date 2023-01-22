@@ -43,7 +43,7 @@
         if (event.target.dataset.name === undefined){
             renderProducts(myStore.getAllProducts())
         } else{
-            renderProducts(myStore.getByType(event.target.dataset.name))
+            renderProducts(myStore.getProductsByType(event.target.dataset.name))
         }
     });
 
