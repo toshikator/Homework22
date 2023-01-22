@@ -16,7 +16,29 @@ class Product {
     #manufacture;
     #price;
     #specialParameter;
-    #specialParameterName;
+    specialParameterSetter(value) {
+        if (this.constructor.name === 'Chocolate'){
+            if (typeof value === "string") {
+                this.#specialParameter = value;
+            } else {
+                this.#specialParameter = '';
+                console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
+            }
+        } else if(this.constructor.name === 'Milk' || this.constructor.name === 'Wine'){
+            if (!Number.isNaN(Number(value)) && value !== undefined
+                && (Number(value) >= 0) && (Number(value) < 100)){
+                this.#specialParameter = Number(value);
+            } else{
+                this.#specialParameter = 0;
+                console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
+            }
+        }else{
+            this.#specialParameter = 0;
+        }
+
+    }
+
+    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
     constructor(title = 'defaultTitle',
                 manufacture = 'defaultManufacture',
                 price = 0) {
@@ -25,6 +47,11 @@ class Product {
         this.priceSetter = price;
         this.#id = Product.#amountOfInstances++;
     }
+
+    get specialParameterName() {
+        return this.#specialParameterName;
+    }
+    get specialParameterGetter(){ return this.#specialParameter; }
     get idGetter(){ return this.#id; }
     get titleGetter(){ return this.#title; }
     get priceGetter(){ return this.#price; }
@@ -50,58 +77,64 @@ class Product {
             console.error('ERROR!!! Trying to set not a number to price');
         }
     }
+
 }
 
 class Milk extends  Product{
-    #specialParameter;
-    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+    // #specialParameter;
+    // #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
     constructor(title, manufacture, price, specialParameter) {
         super(title, manufacture, price);
-        this.specialParameterSetter = specialParameter;
+        this.specialParameterSetter(specialParameter);
     }
-    get specialParameterNameGetter(){return this.#specialParameterName}
-    get specialParameterGetter(){ return this.#specialParameter; }
-    set specialParameterSetter(value){
-        if (!Number.isNaN(Number(value)) && value !== undefined && (!Number.isNaN(Number(value) >= 0)) && (!Number.isNaN(Number(value) < 100))){
-            this.#specialParameter = Number(value);
-        } else{
-            console.error('ERROR!!! Trying to set incorrect value to alcohol');
-        }
-    }
+    get specialParameterNameGetter(){return this.specialParameterName}
+    // get specialParameterGetter(){ return this.#specialParameter; }
+    // set specialParameterSetter(value){
+    //     if (!Number.isNaN(Number(value)) && value !== undefined
+    //         && (Number(value) >= 0) && (Number(value) < 100)){
+    //         this.#specialParameter = Number(value);
+    //     } else{
+    //         this.#specialParameter = 0;
+    //         console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
+    //     }
+    // }
 }
 class Chocolate extends Product{
-    #specialParameter;
-    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+    // #specialParameter;
+    // #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
 constructor(title, manufacture, price, specialParameter) {
     super(title, manufacture, price);
-    this.specialParameterSetter = specialParameter;
+    this.specialParameterSetter(specialParameter);
 }
-    get specialParameterNameGetter(){return this.#specialParameterName}
-    get specialParameterGetter(){ return this.#specialParameter; }
-    set specialParameterSetter(value){
-        if (typeof value === "string") {
-            this.#specialParameter = value;
-        } else {
-            console.error('ERROR!!! Trying to set not a string to kind');
-        }
-    }
+    get specialParameterNameGetter(){return this.specialParameterName}
+    // get specialParameterGetter(){ return this.#specialParameter; }
+    // set specialParameterSetter(value){
+    //     if (typeof value === "string") {
+    //         this.#specialParameter = value;
+    //     } else {
+    //         this.#specialParameter = '';
+    //         console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
+    //     }
+    // }
 }
 class Wine extends  Product{
-    #specialParameter;
-    #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
+    // #specialParameter;
+    // #specialParameterName = Product.getSpecialParametersDatabase()[this.constructor.name.toLowerCase()];
     constructor(title, manufacture, price, specialParameter) {
         super(title, manufacture, price);
-        this.specialParameterSetter = specialParameter;
+        this.specialParameterSetter(specialParameter);
     }
-    get specialParameterNameGetter(){return this.#specialParameterName}
-    get specialParameterGetter(){ return this.#specialParameter; }
-    set specialParameterSetter(value){
-        if (!Number.isNaN(Number(value)) && value !== undefined && (!Number.isNaN(Number(value) >= 0)) && (!Number.isNaN(Number(value) < 100))){
-            this.#specialParameter = Number(value);
-        } else{
-            console.error('ERROR!!! Trying to set incorrect value to alcohol');
-        }
-    }
+    get specialParameterNameGetter(){return this.specialParameterName}
+    // get specialParameterGetter(){ return this.#specialParameter; }
+    // set specialParameterSetter(value){
+    //     if (!Number.isNaN(Number(value)) && value !== undefined
+    //         && (Number(value) >= 0) && (Number(value) < 100)){
+    //         this.#specialParameter = Number(value);
+    //     } else{
+    //         this.#specialParameter = 0;
+    //         console.error(`ERROR!!! Trying to set incorrect special parameter for ${this.constructor.name}`);
+    //     }
+    // }
 }
 
 class Store {
